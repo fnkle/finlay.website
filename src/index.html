@@ -8,49 +8,86 @@
 
 </head>
 
-<body>
-
-    <header class="w-full h-full bg-english-violet p-3 drop-shadow-lg">
-        <h1 class="text-7xl text-center text-tea-green font-bold underline p-4">
-            Finlay Ross
-        </h1>
+<body class="flex flex-col bg-english-violet h-screen">
+    <!--class="w-full bg-english-violet p-3 drop-shadow-lg transition duration-300"
+    
+    <h1 class="text-7xl text-center text-tea-green font-bold underline p-4">-->
+    <header class="sticky top-0 w-full bg-english-violet p-3 drop-shadow-lg">
+            <h1 class="text-7xl text-center text-tea-green font-bold underline p-4">Finlay Ross</h1>
     </header>
 
 
-    <div class="flex flex-row h-screen">
-        <nav class="basis-6/24 p-2 text-tea-green bg-english-violet border-dark-english-violet border-r-2 ">
-            <div>
+    <div class="flex flex-row  bg-english-violet h-screen">
+        <nav class="basis-6/24 p-2 text-tea-green bg-english-violet border-dark-english-violet border-r-2">
+            <div class = "pb-2">
                 <ul>
-                    <li class="underline hover:text-moonstone hover:scale-110 hover:translate-x-5 pt-2"> About me</li>
+                    <li class="underline hover:text-moonstone hover:scale-110 hover:translate-x-5 pt-2 " onclick="aboutMe()"> About me</li>
                 </ul>
             </div>
-            <div>
+            <hr class="border-dark-english-violet" />
+            <div class = "pb-2">
                 <ul>
                     <li class="underline pt-2">University Assignments</li>
-                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2">Introduction to Programming</li>
-                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2">Programming Using an Object-Oriented Language</li>
-                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2">Fundamentals of Web Development</li>
-                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2">C and C++</li>
-                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2">Algorithm Design and data Structures</li>
+                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2 pr-4" onclick="introToProg()">Introduction to
+                        Programming</li>
+                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2 pr-3" onclick="OOP()">Programming
+                        Using an
+                        Object-Oriented Language</li>
+                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2 pr-3" onclick="c()">C and C++</li>
+                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2 pr-3" onclick="algo()">Algorithm Design and Data Structures</li>
                 </ul>
             </div>
-            <div>
+            <hr class="border-dark-english-violet" />
+            <div class = "pb-2">
                 <ul>
                     <li class="underline pt-2">Personal Projects</li>
-                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2">finlay.website</li>
-                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2">Snake</li>
+                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2 pr-3" onclick="personalSite()">finlay.website
+                    </li>
+                    <li class="hover:text-moonstone hover:scale-110 hover:translate-x-5 pl-4 pt-2 pr-3" onclick="snake()">Snake</li>
                 </ul>
             </div>
-    
+
         </nav>
-    
-        <div class="basis-18/24 text-tea-green bg-english-violet p-2">
-            <h1 class="text-3xl font-bold underline">
-                Finlay Ross
+
+        <div id="article" class="basis-18/24 text-tea-green bg-english-violet p-2">
+            <h1 class="text-3xl font-bold underline pt-3">
+                About Me
             </h1>
+            <p class="pl-2 pt-2 text-l">
+                I'm a second year computer science student, who enjoys coding and solving problems. In free time I enjoy looking into new technolgies and finding interesting facts. Outside of technology I enjoy many forms of media such as TV-shows, movies, books, comics and gaming. 
+            </p>
+            <p class="pl-2 pt-2 text-l">
+                As a second year student at Aberystwyth I have enjoyed meeting new people and hearing interesting stories from lecturers while learning and improving my abilities. Outside of lectures I am a part of the Karaoke Society, Table Tennis Society and play Dungeons and Dragons with friends.
+            </p>
+            <p class="pl-2 pt-2 text-l">
+                Following my second year of studying I am excited to begin a placement year position wihtin Ansys at their Horsham location. This being my first proffesional development experience within the field and I look forward to learning a lot.
+            </p>
         </div>
     </div>
-
 </body>
+
+<script>
+    function aboutMe(){
+        document.getElementById("article").innerHTML = "<h1 class=\"text-3xl font-bold underline pt-3\">About Me</h1><p class=\"pl-2 pt-2 text-l\">I'm a second year computer science student, who enjoys coding and solving problems. In free time I enjoy looking into new technolgies and finding interesting facts. Outside of technology I enjoy many forms of media such as TV-shows, movies, books, comics and gaming. </p><p class=\"pl-2 pt-2 text-l\">As a second year student at Aberystwyth I have enjoyed meeting new people and hearing interesting stories from lecturers while learning and improving my abilities. Outside of lectures I am a part of the Karaoke Society, Table Tennis Society and play Dungeons and Dragons with friends.</p><p class=\"pl-2 pt-2 text-l\">Following my second year of studying I am excited to begin a placement year position wihtin Ansys at their Horsham location. This being my first proffesional development experience within the field and I look forward to learning a lot.</p>"
+    }
+    function introToProg(){
+        document.getElementById("article").innerHTML = "<h1 class=\"text-3xl font-bold underline pt-3\" >Introduction to Programming</h1><h2 class=\"text-l font-bold pt-3\" >Overall Module Mark: 85%</h2><p class=\"pl-2 pt-2 text-l\">A first year module based in Arduino C language coding on an Arduino Uno. This was my first time coding within C and was fun to work with an arduino for the first time. I was part of the networking group that had us attach our Arduino to a shield that simulated a network with hosts that we could ping. Our job was to then ping them at the correct time and the correct way in order to collect data.</p>"
+    }
+    function OOP(){
+        document.getElementById("article").innerHTML = "<h1 class=\"text-3xl font-bold underline pt-3\" >Programming Using an Object-Oriented Language</h1><h2 class=\"text-l font-bold pt-3\" >Overall Module Mark: 84%</h2><p class=\"pl-2 pt-2 text-l\">A first year module that gave me a more indepth look into the OOP paradigm than I had recieved during my A-Levels and within my free time. The assignment had us make a terminal based revision app in the Java programming language using various OOP principles such as Abstraction, Encapsulation and Polymoprhism. Combinging these I created a highly cohesevie application with low coupling.</p>"
+    }
+    function c(){
+        document.getElementById("article").innerHTML = "<h1 class=\"text-3xl font-bold underline pt-3\" >C and C++</h1><h2 class=\"text-l font-bold pt-3\" >Overall Module Mark: TBA</h2><p class=\"pl-2 pt-2 text-l\">A second year module that gave me an in-depth look into both the C and C++ languages. The assignment was developed in C with a written report how we could've done it in C++ using OOP principles. My C implementation was fairly OOP like though making use of function pointers to switch between menus. The assignment itself was about a program for a microcontroller our lecturer had previously made in order to feed his fish. Though we were not able to code it on the acctual microcontroller our lecturer provided us a simulated environment using Java and JavaFX with functions to interact with said environment.</p>"
+    }
+    function algo(){
+        document.getElementById("article").innerHTML = "<h1 class=\"text-3xl font-bold underline pt-3\" >Algorithm Design and Data Structures</h1><h2 class=\"text-l font-bold pt-3\" >Overall Module Mark: TBA</h2><p class=\"pl-2 pt-2 text-l\">A second year module that went over complex data structures and various implementations using lists and arrays. It also went over runtime and making efficient algorithms to solve problems and ways you may solve problems including dynamic programming. The assignment (in Java) had us conform to interfaces provided to us in order to find words that rhymed within a large dictionary. This assignment was paticularly interesting as it had me thinking even harder about ways to solve the problem as we would recieve a better mark for a more efficient algorithm.</p>"
+    }
+    function personalSite(){
+        document.getElementById("article").innerHTML = "<h1 class=\"text-3xl font-bold underline pt-3\" >finlay.website<h1> <p class=\"pl-2 pt-2 text-l\">This website has seen many versions over the last year and a half I've had it. Originally it started as a grey and bland static page using just HTML and CSS. This then had an attempt at a facelift by trying to improve my colorscheme. Next, having kept hearing about react, I decided to convert my website into react native to get some experience within react. This was an interesting experience and was fun learning about it and I intend to mess with react more in the future though it will probably be in a framework instead of native. I stayed on my react native website for a while before deciding it needed a refresh.</p><p class=\"pl-2 pt-2 text-l\">That brings us to this iteration of the website done in HTML, CSS and JS and making use of tailwind to make writing my CSS faster and improve the look of my website easier.</p>"
+    }
+    function snake(){
+        document.getElementById("article").innerHTML = "<h1 class=\"text-3xl font-bold underline pt-3\" >Snake<h1><p class=\"pl-2 pt-2 text-l\">Written in C++ using SDL2 for graphics I have made a simple snake game in the OOP paradigm. This came about as I wanted to mess around in C++ and figured graphics would be a fun way to do it. Reccomended SDL2 by a friend I had fun using it and making the game</p>"
+    }
+</script>
 
 </html>
